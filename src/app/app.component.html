@@ -1,5 +1,4 @@
 <div class="container">
-  <form>
     <div class="row">
       <div class="col col-md">
         <h1>Por favor, seleccione una fecha y una sección o más</h1>
@@ -10,5 +9,8 @@
         <app-datepicker (onDataSelected)="onDateSelected($event)"></app-datepicker>
       </div>
     </div>
-  </form>
+    <div>
+      <mat-progress-bar mode="determinate" [value]="valueLoad" *ngIf="showProgressBar"></mat-progress-bar>
+    </div>
+
 </div>

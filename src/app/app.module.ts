@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatNativeDateModule } from '@angular/material/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { DatePipe } from '@angular/common'
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
+    MatProgressBarModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],

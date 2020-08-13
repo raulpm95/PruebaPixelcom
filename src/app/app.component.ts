@@ -7,6 +7,8 @@ import { HttpService } from '../app/http/http.service';
 })
 export class AppComponent implements OnInit {
   selectedDate: Date = new Date();
+  showProgressBar: Boolean = false;
+  valueLoad: number = 0;
 
   constructor(private http: HttpService) {}
 
@@ -20,15 +22,19 @@ export class AppComponent implements OnInit {
   }
 
   private getSlots() {
+    this.showProgressBar = true;
     this.http.getSlots(this.selectedDate).then(this.onGetSlotsSuccess.bind(this)).catch(this.onGetSlotsError.bind(this));
   }
 
   private onGetSlotsSuccess(e: any) {
-    console.log('Correcto');
-    console.log(e);
+    e.data.forEach(element => {
+      this.valueLoad += 1;
+    });
+    this.showProgressBar = false;
   }
 
   private onGetSlotsError(err: any) {
+    this.showProgressBar = false;
     console.log('Error');
     console.log(err);
   }
