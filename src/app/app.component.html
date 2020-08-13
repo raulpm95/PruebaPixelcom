@@ -1,1 +1,14 @@
-<app-datepicker></app-datepicker>
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col col-md">
+        <h1>Por favor, seleccione una fecha y una sección o más</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-md">
+        <app-datepicker (onDataSelected)="onDateSelected($event)"></app-datepicker>
+      </div>
+    </div>
+  </form>
+</div>

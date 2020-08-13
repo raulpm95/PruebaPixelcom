@@ -5,5 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'PruebaPixelcom';
+  selectedDate: Date;
+
+  constructor() {}
+
+  onDateSelected(e: Date) {
+    this.selectedDate = e;
+    console.log(this.selectedDate);
+  }
 }
