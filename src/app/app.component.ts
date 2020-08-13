@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.showProgressBar = true;
     this.showErrorMessage = false;
     this.showWarningMessage = false;
-    this.http.getSlots(this.selectedDate).then(this.onGetSlotsSuccess.bind(this)).catch(this.onGetSlotsError.bind(this));
+    // this.http.getSlots(this.selectedDate).then(this.onGetSlotsSuccess.bind(this)).catch(this.onGetSlotsError.bind(this));
   }
 
   private onGetSlotsSuccess(e: any) {

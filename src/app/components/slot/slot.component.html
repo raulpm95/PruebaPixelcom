@@ -1,0 +1,17 @@
+<div class="slot-container">
+  <div class="row">
+    <div class="col col-md">
+      {{slot.startTime}}
+    </div>
+    <div class="col col-md">
+      <mat-checkbox [value]="slot.selected" (change)="onSelectedChange($event)"></mat-checkbox>
+    </div>
+  </div>
+  <div class="users-avaliable">
+    <div class="row">
+      <div class="col col-md">
+        0/{{slot.usersAvaliable}} personas
+      </div>
+    </div>
+  </div>
+</div>

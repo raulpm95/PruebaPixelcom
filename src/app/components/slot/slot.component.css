@@ -1,0 +1,9 @@
+.slot-container {
+  border: 1px solid;
+  width: 10%;
+}
+
+.users-avaliable {
+  background-color: green;
+  color: white;
+}

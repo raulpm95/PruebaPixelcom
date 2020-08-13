@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,13 +14,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common'
 import { ErrorMessageComponent } from '../app/components/alerts/errorMessage/errorMessage.component';
 import { EmptyResultMessageComponent } from '../app/components/alerts/emptyResultMessage/emptyResultMessage.component';
+import { SlotComponent } from '../app/components/slot/slot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatepickerComponent,
     ErrorMessageComponent,
-    EmptyResultMessageComponent
+    EmptyResultMessageComponent,
+    SlotComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { EmptyResultMessageComponent } from '../app/components/alerts/emptyResul
     MatInputModule,
     MatNativeDateModule,
     MatProgressBarModule,
+    MatCheckboxModule,
     BrowserAnimationsModule,
     HttpClientModule
   ],
