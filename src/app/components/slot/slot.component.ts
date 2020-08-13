@@ -20,5 +20,8 @@ export class SlotComponent {
 
   onSelectedChange(e: any) {
     this.slot.selected = e.checked;
+    if (this.slot.usersAvailable !== 0) {
+      this.slot.ocupaciones = this.slot.selected ? this.slot.ocupaciones + 1 : this.slot.ocupaciones - 1;
+    }
   }
 }
