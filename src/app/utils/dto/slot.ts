@@ -5,8 +5,8 @@ export class Slot {
   selected: boolean;
 
   constructor(e?: any) {
-    this.startTime = e ? e.startTime : '';
-    this.endTime = e ? e.endTime : '';
+    this.startTime = e ? e.startTime.substring(0,5) : '';
+    this.endTime = e ? e.endTime.substring(0,5) : '';
     this.usersAvailable = e ? e.usersAvailable : 0;
     this.selected = false;
   }
