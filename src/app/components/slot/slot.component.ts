@@ -8,11 +8,13 @@ import { Slot } from '../../utils/dto/slot';
 })
 export class SlotComponent {
 
-  @Input() slot: Slot = new Slot({
-    startTime: '10:00',
-    endTime: '10:30',
-    usersAvaliable: 17
-  });
+  private _slot: Slot;
+  get slot() {
+    return this._slot;
+  }
+  @Input()  set slot(value: any) {
+    this._slot = new Slot(value);
+  }
   constructor() {
   }
 

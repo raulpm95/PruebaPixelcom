@@ -24,5 +24,22 @@
         <app-empty-result-message></app-empty-result-message>
       </div>
     </div>
-    <app-slot></app-slot>
+    <div *ngIf="!showErrorMessage && !showWarningMessage && !showProgressBar">
+      <div class="row">
+        <div class="col col-md"></div>
+        <div class="col col-md">
+          <p>Seleccione las secciones</p>
+        </div>
+        <div class="col col-md"></div>
+      </div>
+      <div class="row">
+        <div *ngFor="let slot of slots">
+          <div class="col col-md-auto">
+            <div class="slot-padding">
+              <app-slot [slot]="slot"></app-slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
