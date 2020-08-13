@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
-import { HttpAttributes } from './header';
+import { HttpAttributes } from './httpAttributes';
 
 @Injectable({
   providedIn: 'root'

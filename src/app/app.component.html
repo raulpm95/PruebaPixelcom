@@ -9,8 +9,20 @@
         <app-datepicker (onDataSelected)="onDateSelected($event)"></app-datepicker>
       </div>
     </div>
-    <div>
-      <mat-progress-bar mode="determinate" [value]="valueLoad" *ngIf="showProgressBar"></mat-progress-bar>
+    <div class="row" *ngIf="showProgressBar">
+      <div class="col col-md">
+        <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+      </div>
+    </div>
+    <div class="row" *ngIf="showErrorMessage">
+      <div class="col col-md">
+        <app-error-message></app-error-message>
+      </div>
+    </div>
+    <div class="row" *ngIf="showWarningMessage">
+      <div class="col col-md">
+        <app-empty-result-message></app-empty-result-message>
+      </div>
     </div>
 
 </div>

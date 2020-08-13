@@ -11,11 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DatepickerComponent } from '../app/components/datepicker/datepicker.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common'
+import { ErrorMessageComponent } from '../app/components/alerts/errorMessage/errorMessage.component';
+import { EmptyResultMessageComponent } from '../app/components/alerts/emptyResultMessage/emptyResultMessage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    ErrorMessageComponent,
+    EmptyResultMessageComponent
   ],
   imports: [
     BrowserModule,
