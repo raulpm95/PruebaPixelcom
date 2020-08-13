@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DatepickerComponent } from '../app/components/datepicker/datepicker.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

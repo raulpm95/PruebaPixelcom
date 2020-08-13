@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Header } from './header';
+import { DatePipe } from '@angular/common';
+import { HttpAttributes } from './header';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private datePipe: DatePipe) {}
 
-  getSlots(): Promise<any> {
+  getSlots(date: Date): Promise<any> {
     const header = new HttpHeaders({
-      'Authorization': Header['token']
+      'Authorization': HttpAttributes['token']
     });
-    return this.http.get('http://test.services.pixeltiming.com:4400/booking/availability?date=2020-08-28', { headers: header }).toPromise();
+    const urlDate: string = this.datePipe.transform(date, 'yyyy-MM-dd');
+    return this.http.get(HttpAttributes['url'] + urlDate, { headers: header }).toPromise();
   }
 }
